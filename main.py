@@ -4,13 +4,12 @@
 
 from random import randint
 
-arq = open("input")
-lines = int(arq.readline())
+arq = open("input", "r")
+filecontent = arq.readlines()
+lines = len(filecontent)
 
-randline = randint(1, lines)
-lineContent = ""
-for i in range(0, randline):
-	lineContent = arq.readline()
+randline = randint(0, lines-1)
+lineContent = filecontent[randline]
 print lineContent
 arq.close()
 
